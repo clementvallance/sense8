@@ -1,7 +1,84 @@
+:root{
+  --grey: #EEEEEE;
+  --greyDarker: #AEAEAE;
+  --greyBlue: #798994
+}
+
 body{
-  background-color: #EEEEEE;
+  background-color: var(--grey);
 }
 
 main{
-  width: 85vw;
+  height: 200vh;
+  background-color: var(--greyDarker);
+}
+
+/* header{
+  width: 100vw;
+  height: 10vh;
+  background-color: var(--greyBlue);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header{
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.header__logo{
+  width: 65px;
+  height: 65px;
+  background-color: var(--grey);
+  position: absolute;
+  top: 50%;
+  left: 7.5vw;
+  transform: translateY(-50%);
+}
+
+.header__right{
+  position: absolute;
+  top: 50%;
+  right: 7.5vw;
+  transform: translateY(-50%);
+}
+
+.header__menu--mobile{
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__menu{
+    display: none;
+  }
+  .header__menu--mobile{
+    display: block
+  }
+} */
+
+.landing{
+  height: 100vh;
+}
+
+.landing__text{
+  display: inline-block;
+  height: 60vh;
+}
+
+.landing__image{
+  display: inline-block;
+  height: 60vh;
+  background-color: var(--greyBlue);
+}
+
+.landing__text h1{
+  font-size: 4em;
+}
+
+.about__card img{
+  height: 30vh;
+  margin-right: 20px;
+  background-color: var(--greyBlue);
 }
