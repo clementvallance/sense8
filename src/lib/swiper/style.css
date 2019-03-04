@@ -1,0 +1,116 @@
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    position: relative;
+    padding: 0;
+}
+.swiper-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+/*    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;*/
+    display: flex;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.swiper-container {
+    width: 100%;
+    height: 300px;
+    margin: 20px auto;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+/*    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;*/
+    display: flex;
+    align-items: center;
+}
+.append-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+.append-buttons a {
+    display: inline-block;
+    border: 1px solid #007aff;
+    color: #007aff;
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin: 0 10px;
+    font-size: 13px;
+}
+
+
+
+
+/* ----      ---- */
+
+
+
+
+.card_container_img{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.card_img{
+    width:70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+.card_container_img img{
+    width: 200%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.slider_navigation{
+    position: relative;
+    width: 100vw;
+    height: 10vh;
+
+
+}
+
+.inner_navigation{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.swiper-button-next{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    right: 0;
+    display: inline-block;
+}
+
+.swiper-button-prev{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    left: 0;
+    display: inline-block;
+
+}
