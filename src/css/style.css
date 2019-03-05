@@ -9,54 +9,26 @@ body{
 }
 
 main{
-  height: 200vh;
   background-color: var(--greyDarker);
 }
 
-/* header{
-  width: 100vw;
-  height: 10vh;
-  background-color: var(--greyBlue);
-  position: fixed;
-  top: 0;
-  left: 0;
+h1{
+  font-size: 4em;
 }
+
+h2{
+  font-size: 3.5em;
+}
+
+h3{
+  font-size: 2em;
+}
+
 
 .header{
-  height: 100%;
-  width: 100%;
-  position: relative;
+  background-color: var(--greyBlue);
+  height: 25vh;
 }
-
-.header__logo{
-  width: 65px;
-  height: 65px;
-  background-color: var(--grey);
-  position: absolute;
-  top: 50%;
-  left: 7.5vw;
-  transform: translateY(-50%);
-}
-
-.header__right{
-  position: absolute;
-  top: 50%;
-  right: 7.5vw;
-  transform: translateY(-50%);
-}
-
-.header__menu--mobile{
-  display: none;
-}
-
-@media screen and (max-width: 1024px) {
-  .header__menu{
-    display: none;
-  }
-  .header__menu--mobile{
-    display: block
-  }
-} */
 
 .landing{
   height: 100vh;
@@ -73,12 +45,84 @@ main{
   background-color: var(--greyBlue);
 }
 
-.landing__text h1{
-  font-size: 4em;
+.about{
+  height: 60vh;
 }
 
 .about__card img{
   height: 30vh;
-  margin-right: 20px;
+  margin: 0px 20px 25px 0px;
   background-color: var(--greyBlue);
+}
+
+.about__card h3 {
+  margin-bottom: 10px;
+}
+
+.features{
+  height: 80vh;
+}
+
+.features__text{
+  display: inline-block;
+  height: 60vh;
+}
+
+.features__image{
+  display: inline-block;
+  height: 60vh;
+  background-color: var(--greyBlue);
+}
+
+.features__text h1{
+  font-size: 4em;
+}
+
+.opinion__list{
+  width: 100%;
+  height: 50vh;
+}
+
+.opinion__list-content{
+  height: 50%;
+  background-color: var(--greyBlue);
+}
+
+.download{
+  height: 80vh;
+}
+
+.download__text{
+  display: inline-block;
+  height: 60vh;
+}
+
+.download__image{
+  display: inline-block;
+  height: 60vh;
+  background-color: var(--greyBlue);
+}
+
+.download__text h1{
+  font-size: 4em;
+}
+
+.faq__title{
+  margin-bottom: 25px;
+}
+
+.faq__questionList{
+  height: 100%;
+  margin-bottom: 10vh;
+}
+
+.faq__questions{
+  height: 50px;
+  background-color: var(--greyBlue);
+  margin-bottom: 15px;
+}
+
+.footer{
+  background-color: var(--greyBlue);
+  height: 25vh;
 }
