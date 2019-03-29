@@ -1,9 +1,39 @@
+/* BEM MUST BE USED TO DEV */
+
+
+/*==== VARIABLES ====*/
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
 :root{
   --grey: #EEEEEE;
   --greyDarker: #AEAEAE;
-  --greyBlue: #798994
+  --greyBlue: #798994;
+
+
+
+  /* Light colors */
+
+  --mainPurple : #8439FF;
+  --sndPurple : #8F00FF;
+  --radiantPurple : linear-gradient(135deg, #8439FF 0%, #8F00FF 97.86%);
+
 }
 
+
+/*==== COMPONENTS  ====*/
+
+.s8-btn{
+
+  background-color: var(--mainPurple);
+  padding: 5px 10px;
+  border:none;
+}
+
+
+
+
+
+/*==== PERSONALIZED STYLE ====*/
 body{
   background-color: var(--grey);
 }
