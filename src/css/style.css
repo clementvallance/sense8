@@ -15,7 +15,11 @@
 
   --mainPurple : #8439FF;
   --sndPurple : #8F00FF;
-  --radiantPurple : linear-gradient(135deg, #8439FF 0%, #8F00FF 97.86%);
+  --gradiantPurple : linear-gradient(135deg, #8439FF 0%, #8F00FF 97.86%);
+
+  /* Font */
+
+  --font : 'Lato', sans-serif;
 
 }
 
@@ -24,9 +28,20 @@
 
 .s8-btn{
 
-  background-color: var(--mainPurple);
-  padding: 5px 10px;
+  background: var(--mainPurple);
+  padding: 15px 30px;
   border:none;
+  font-family: var(--font) ;
+  border-radius: 50px;
+  color: white;
+  margin-top: 50px;
+  transition: box-shadow 250ms ease-in;
+}
+.s8-btn:hover{
+
+  background: var(--gradiantPurple);
+  box-shadow: 0px 5px 23px rgba(143, 0, 255, 0.25);
+  transition: box-shadow 250ms ease-in;
 }
 
 
