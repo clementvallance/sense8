@@ -13,6 +13,7 @@ var swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev',
     },
 });
+/*
 document.querySelector('.prepend-2-slides').addEventListener('click', function (e) {
     e.preventDefault();
     swiper.prependSlide([
@@ -34,4 +35,4 @@ document.querySelector('.append-2-slides').addEventListener('click', function (e
         '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>',
         '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>'
     ]);
-});
+});*/

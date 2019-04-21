@@ -8,6 +8,7 @@
   --grey: #EEEEEE;
   --greyDarker: #AEAEAE;
   --greyBlue: #798994;
+  --mainGreen : #1CE99F;
 
 
 
@@ -20,6 +21,21 @@
   /* Font */
 
   --font : 'Lato', sans-serif;
+  --fontPurple : #1D004D;
+  --fontContent : #141535;
+
+  /* Font size */
+
+  --webP : 1.8rem;
+  --webH2 : 4.6rem;
+  --webPBigger : 2rem;
+  --webCaption : 1.2rem;
+  --webA : 1.8rem;
+
+  /* Effects */
+
+  --WEBshadow : 0px 6px 25px rgba(138, 30, 255, 0.06);
+
 
 }
 
@@ -29,6 +45,7 @@
 .s8-btn{
   background: var(--mainPurple);
   padding: 15px 30px;
+  font-size: 1.8rem;
   border:none;
   font-family: var(--font) ;
   border-radius: 50px;
@@ -42,19 +59,36 @@
   transition: box-shadow 250ms ease-in;
 }
 
+.features__button {
+  padding: 0;
+  margin-top: 35px;
+  border: none;
+  font-size: var(--webCaption);
+  letter-spacing: 1px;
+  color: var(--fontPurple);
+}
 
 
+html{
+  font-size:62.5%;
+}
 
 
 /*==== PERSONALIZED STYLE ====*/
-body{
+body {
+
+  background-image: url("../img/cover-circle.png");
+  background-size: cover;
+  font-family: var(--font);
+
 }
+
 
 main{
 }
 
 h1{
-  font-size: 4em;
+  font-size: 5.8rem;
 }
 
 h2{
@@ -65,6 +99,13 @@ h3{
   font-size: 2em;
 }
 
+p {
+  font-weight: lighter;
+  color: var(--fontContent);
+  font-size: var(--webP);
+  line-height: 120%;
+}
+
 .container-fluid{
   margin: 0;
   padding: 0;
@@ -73,7 +114,6 @@ h3{
 
 
 .header-content{
-  background-color: var(--mainPurple);
   height: 15vh;
   position: fixed;
   top: 0;
@@ -91,9 +131,8 @@ h3{
 }
 
 .header__logo{
-  height: 4vh;
-  width: 180px;
-  background-color: #ffffff;
+
+
 }
 
 .header-right{
@@ -105,8 +144,9 @@ h3{
 }
 
 .header__suscribe{
-  height: 6vh;
   width: 200px;
+  border: solid 2px var(--mainGreen);
+  background: initial;
 }
 
 .header__menu{
@@ -116,10 +156,12 @@ h3{
   width: 6vh;
 }
 
-.landing-background{
-  background-color: var(--mainPurple);
+#container__bckg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
 }
-
 .landing{
   height: 100vh;
 }
@@ -128,8 +170,7 @@ h3{
   display: inline-block;
   height: 60vh;
   color: #ffffff;
-  font-family: 'lato';
-  padding-right: 100px;
+  padding-right: 70px;
 }
 
 .landing__text h1{
@@ -137,13 +178,16 @@ h3{
 }
 
 .landing__text p{
-  line-height: 31px;
+  font-size: 2rem;
+  line-height: 130%;
   letter-spacing: 0.05em;
   margin-bottom: 30px;
+  font-weight: lighter;
+  color: white;
 }
 
 .landing__button{
-  background-color: #1CE99F;
+  background-color: var(--mainGreen);
 }
 
 .landing__button-video{
@@ -154,7 +198,7 @@ h3{
 
 .landing__image{
   display: inline-block;
-  height: 60vh;
+  height: 300px;
   background-color: var(--greyBlue);
 }
 
@@ -162,29 +206,86 @@ h3{
   height: 60vh;
 }
 
+.about__card {
+  text-align: center;
+  padding: 5px;
+  align-items: center;
+}
+
 .about__card img{
-  height: 30vh;
-  margin: 0px 20px 25px 0px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin: 0px 0px 25px 0px;
   background-color: var(--greyBlue);
+}
+.about__card_content{
+  padding: 0 20px;
+}
+.about__card_wrapper {
+  padding: 50px 0;
+  margin: 15px;
+  border: solid 1px transparent;
+  transition: box-shadow .25s;
+}
+
+.about__card_wrapper:hover{
+  box-shadow: var(--WEBshadow);
+  transition: box-shadow .25s;
+
 }
 
 .about__card h3 {
   margin-bottom: 10px;
+  font-size: var(--webPBigger);
+  color: var(--fontPurple);
+}
+.about__card p {
+  font-size: var(--webP);
+  line-height: 130%;
+  width: 90%;
+  margin: auto;
 }
 
 .features{
   height: 80vh;
+  flex-direction: row-reverse;
+}
+.features.reverse{
+  flex-direction: row;
+}
+.features__wrapper{
+  width: 80%;
 }
 
+.features__category {
+  color: var(--mainPurple);
+  font-size: var(--webCaption);
+  margin-bottom: 10px;
+  display: block;
+}
 .features__text{
   display: inline-block;
   height: 60vh;
+  align-items: center;
+  margin: 10px;
+}
+.features__text h2 {
+  font-size: var(--webH2);
+}
+.features__text p {
+  margin-top: 35px;
 }
 
 .features__image{
   display: inline-block;
   height: 60vh;
+  width: 100%;
   background-color: var(--greyBlue);
+}
+
+.features__image img{
+  width: 80%;
 }
 
 .features__text h1{
