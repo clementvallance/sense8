@@ -67,10 +67,14 @@ $(document).ready(() => {
 
         }
 
-
-
     }
 
+
+    $(".menu-toggle").on('click', function() {
+        $(this).toggleClass("on");
+        $('.menu-section').toggleClass("on");
+        $("nav ul").toggleClass('hidden');
+    });
 
     const stickyMenu = new Sticky(document.querySelector("body"), document.querySelector('.landing-background'), document.querySelector('.header-content') )
     stickyMenu.init();
