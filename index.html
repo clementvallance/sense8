@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Cluster - Sense 8 application</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="icon" type="image/png" href="src/img/favicon.png"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -20,7 +22,7 @@
 <div class="container-fluid header-content">
     <div class="container nav">
         <header>
-            <div class="header col-12">
+            <div class="header col-sm-12">
                 <div class="header__logo">
 
                         <img src="src/img/cluster-black.png" alt="Logo cluster">
@@ -50,7 +52,7 @@
         </header>
     </div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid first-container">
     <div class="container-fluid landing-background">
         <div class="container">
             <svg id="container__bckg" width="100%" height="100%" viewBox="0 0 1440 810" fill="none"
@@ -78,7 +80,7 @@
             </svg>
             <div>
                 <section class="landing d-flex align-items-center">
-                    <div class="landing__text col-6 d-flex flex-column justify-content-center">
+                    <div class="landing__text col-12 col-sm-6 d-flex flex-column justify-content-center">
                         <h1>Better together</h1>
                         <p>Cluster gather 8 differents profiles and provide a private space where they can exchange and
                             help each other</p>
@@ -87,7 +89,7 @@
                             <a class="landing__button-video" href="#">WATCH DEMO</a>
                         </div>
                     </div>
-                    <div class="landing__image col-6">
+                    <div class="landing__image col-12 col-sm-6">
 
                     </div>
                 </section>
@@ -96,7 +98,7 @@
     </div>
 
     <div class="container">
-        <section class="about col-10 offset-1 d-flex">
+        <section class="about col-sm-10 offset-sm-1 d-flex">
             <div class="about__card d-flex flex-column justify-content-center">
                 <div class="about__card_wrapper">
                     <img src="src/img/cluster-picto.png" alt="Create Your Profile">
@@ -127,7 +129,7 @@
         </section>
 
         <section class="features d-flex align-items-center">
-            <div class="features__text col-6 d-flex flex-column justify-content-center">
+            <div class="features__text col-sm-6 d-flex flex-column justify-content-center">
                 <div class="features__wrapper">
                     <span class="features__category category">SUBTITLE</span>
                     <h2>I’m the second title</h2>
@@ -138,13 +140,13 @@
                     </div>
                 </div>
             </div>
-            <figure class="features__image col-6">
+            <figure class="features__image col-sm-6">
                 <img src="src/img/everywhere.png" alt="find people anywhere across the world ">
             </figure>
         </section>
 
         <section class="features reverse d-flex align-items-center">
-            <div class="features__text col-6 d-flex flex-column justify-content-center">
+            <div class="features__text col-sm-6 d-flex flex-column justify-content-center">
                 <div class="features__wrapper">
                     <span class="features__category category">SUBTITLE</span>
                     <h2>I’m the second title</h2>
@@ -155,13 +157,13 @@
                     </div>
                 </div>
             </div>
-            <figure class="features__image col-6">
+            <figure class="features__image col-sm-6">
                 <img src="src/img/everywhere.png" alt="find people anywhere across the world ">
             </figure>
         </section>
 
         <section class="opinion d-flex align-items-center">
-            <div class="col-6 d-flex flex-column justify-content-center">
+            <div class="col-sm-6 d-flex flex-column justify-content-center">
                 <div class="opinion features__wrapper">
                     <span class="opinion features__category category">REVIEWS</span>
                     <h2>What they say about Cluster</h2>
@@ -172,7 +174,7 @@
     </div>
 
     <!--BOOTSTRAP DOES NOT WORK WITH SWIPER-->
-    <section>
+    <section class="testimony">
         <div class="slider_navigation">
             <div class="inner_navigation">
                 <div class="swiper-button prev"><i class="fas fa-chevron-left"></i></div>
@@ -238,10 +240,10 @@
     <div class="container-fluid">
         <div class="container">
             <section class="download d-flex align-items-center">
-                <div class="download__image col-6">
+                <div class="download__image col-12 col-sm-6">
                     <img src="src/img/everywhere.png" alt="find people anywhere across the world ">
                 </div>
-                <div class="download__text col-6 d-flex flex-column justify-content-center">
+                <div class="download__text col-12 col-sm-6 d-flex flex-column justify-content-center">
                     <div class="download__wrapper">
                         <span class="features__category category">OUR APP</span>
                         <h2>Start connect with your Cluster</h2>
@@ -256,13 +258,13 @@
 
             <section class="faq">
                 <div class="faq__content d-flex flex-column">
-                    <div class="faq__title col-6 offset-3">
+                    <div class="faq__title col-12 col-sm-6 offset-sm-3">
                         <span class="category center">STILL HAVE QUESTIONS ?</span>
                         <h2 class="text-center">Frequently asked questions</h2>
                         <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices
                             aliquam eros, eget lacinia quam congue sit amet.</p>
                     </div>
-                        <div class="accordion offset-1 col-10 col-md-10" id="accordionExample">
+                        <div class="accordion offset-sm-1 col-sm-10 col-sm-md-10" id="accordionExample">
 
                             <div class="card">
                                 <div class="card-header" id="headingOne">
@@ -315,7 +317,7 @@
     </div>
     <div class="container-fluid">
         <footer>
-            <div class="footer col-12">
+            <div class="footer col-sm-12">
                 <div class="container">
                     <div class="footer__logo_wrapper">
 

@@ -1,6 +1,7 @@
 var appendNumber = 4;
 var prependNumber = 1;
 var swiper = new Swiper('.swiper-container', {
+
     slidesPerView: 3,
     centeredSlides: true,
     spaceBetween: 30,
@@ -13,6 +14,8 @@ var swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button.prev',
     },
 });
+swiper.slidesPerView = 3;
+console.log(swiper)
 /*
 document.querySelector('.prepend-2-slides').addEventListener('click', function (e) {
     e.preventDefault();
