@@ -34,7 +34,7 @@ $(document).ready(() => {
             $(window).scroll('scroll', () => {
 
                 console.log($(window).scrollTop());
-                if($(window).scrollTop() >= ($(this.landing).height() - 200)) {
+                if($(window).scrollTop() >= ($(this.landing).height() - 50)) {
 
 
                     if(this.isStuck == false) {
@@ -57,11 +57,11 @@ $(document).ready(() => {
             let logo = $(this.menu.querySelector('.header__logo')).find('img');
 
             if(state == true){
-                logo.attr('src', './src/img/cluster.png');
+                logo.attr('src', './src/img/cluster-black.png');
                 console.log(this.menu)
                 $(this.menu).addClass('isSticky');
             }else{
-                logo.attr('src', './src/img/cluster-black.png');
+                logo.attr('src', './src/img/cluster.png');
                 $(this.menu).removeClass('isSticky');
             }
 
