@@ -34,7 +34,7 @@ $(document).ready(() => {
             $(window).scroll('scroll', () => {
 
                 console.log($(window).scrollTop());
-                if($(window).scrollTop() >= ($(this.landing).height() - 50)) {
+                if($(window).scrollTop() >= ($(this.landing).height() - 40)) {
 
 
                     if(this.isStuck == false) {

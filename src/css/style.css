@@ -62,9 +62,11 @@
   padding: 0;
   margin-top: 35px;
   border: none;
-  font-size: var(--webCaption);
+  font-size: 1.4em;
+  font-weight: bold;
   letter-spacing: 1px;
   color: var(--fontPurple);
+  background-color: white;
 }
 
 
@@ -91,6 +93,7 @@ h1{
 
 h2{
   font-size: 3.5em;
+  font-weight: bold;
 }
 
 h3{
@@ -99,9 +102,13 @@ h3{
 
 p {
   font-weight: lighter;
-  color: var(--fontContent);
+  color: var(--fontPurple);
   font-size: var(--webP);
   line-height: 120%;
+}
+
+span{
+  color: var(--sndPurple);
 }
 
 .container-fluid{
@@ -229,6 +236,7 @@ header{
 
 .about{
   height: 60vh;
+  justify-content: space-around;
 }
 
 .about__card {
@@ -247,7 +255,8 @@ header{
   padding: 0 20px;
 }
 .about__card_wrapper {
-  padding: 50px 0;
+  padding: 15px 0;
+  max-width: 275px;
   margin: 15px;
   border: solid 1px transparent;
   transition: box-shadow .25s;
@@ -256,11 +265,10 @@ header{
 .about__card_wrapper:hover{
   box-shadow: var(--WEBshadow);
   transition: box-shadow .25s;
-
 }
 
 .about__card h3 {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-size: var(--webPBigger);
   color: var(--fontPurple);
 }
@@ -280,11 +288,12 @@ header{
 }
 .features__wrapper{
   width: 80%;
-
+}
+.features__wrapper .category{
+  margin-left: 3px;
 }
 
 .category {
-  color: var(--mainPurple);
   font-size: var(--webCaption);
   margin-bottom: 10px;
   display: block;
@@ -294,7 +303,7 @@ header{
 }
 .features__text{
   display: inline-block;
-  height: 60vh;
+  height: 50vh;
   align-items: center;
   margin: 10px;
 }
@@ -307,7 +316,7 @@ header{
 
 .features__image{
   display: inline-block;
-  height: 60vh;
+  height: 50vh;
   width: 100%;
   position: relative;
 }
@@ -400,6 +409,14 @@ header{
 
 .faq__title{
   margin-bottom: 25px;
+}
+
+.faq__title a{
+  color: var(--sndPurple);
+}
+
+.faq__title a:hover{
+  text-decoration: none;
 }
 
 .faq__questionList{
@@ -821,15 +838,20 @@ margin: 50px 0;
   .about {
     flex-direction: column;
     height: auto;
+    margin: 50px 0px;
   }
   .features {
     height: auto;
-    flex-direction: column;
-
+    flex-direction: column-reverse;
+    margin-bottom: 50px;
+  }
+  .features__text{
+    margin: 0px 0px 25px 0px;
+    height: auto;
   }
   .features.reverse {
     height: auto;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .features__wrapper {
@@ -845,11 +867,15 @@ margin: 50px 0;
   }
 
   .download {
-    flex-direction: column;
+    flex-direction: column-reverse;
     height: auto;
+    padding: 50px 0px;
   }
   .download__text {
     height: auto;
+  }
+  .download__image {
+    height: 50vh;
   }
   .download__wrapper {
     width: 100%;
