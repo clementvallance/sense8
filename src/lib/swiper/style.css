@@ -83,17 +83,12 @@
 }
 
 .slider_navigation{
-    position: relative;
-    width: 100vw;
+    display: flex;
     height: 10vh;
-
-
 }
 
 .inner_navigation{
-    position: absolute;
-    right: 10%;
-    top: 0;
+    margin-left: auto;
 }
 .swiper-button i{
     font-size: 25px;
