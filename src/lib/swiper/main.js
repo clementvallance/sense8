@@ -2,7 +2,7 @@ var appendNumber = 4;
 var prependNumber = 1;
 var swiper = new Swiper('.swiper-container', {
 
-    slidesPerView: 3,
+    slidesPerView: 1,
     centeredSlides: true,
     spaceBetween: 30,
     pagination: {
@@ -14,28 +14,3 @@ var swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button.prev',
     },
 });
-swiper.slidesPerView = 3;
-console.log(swiper)
-/*
-document.querySelector('.prepend-2-slides').addEventListener('click', function (e) {
-    e.preventDefault();
-    swiper.prependSlide([
-        '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>',
-        '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>'
-    ]);
-});
-document.querySelector('.prepend-slide').addEventListener('click', function (e) {
-    e.preventDefault();
-    swiper.prependSlide('<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>');
-});
-document.querySelector('.append-slide').addEventListener('click', function (e) {
-    e.preventDefault();
-    swiper.appendSlide('<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>');
-});
-document.querySelector('.append-2-slides').addEventListener('click', function (e) {
-    e.preventDefault();
-    swiper.appendSlide([
-        '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>',
-        '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>'
-    ]);
-});*/

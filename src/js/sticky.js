@@ -33,7 +33,6 @@ $(document).ready(() => {
         getStickyPosition(){
             $(window).scroll('scroll', () => {
 
-                console.log($(window).scrollTop());
                 if($(window).scrollTop() >= ($(this.landing).height() - 40)) {
 
 
@@ -58,7 +57,6 @@ $(document).ready(() => {
 
             if(state == true){
                 logo.attr('src', './src/img/cluster-black.png');
-                console.log(this.menu)
                 $(this.menu).addClass('isSticky');
             }else{
                 logo.attr('src', './src/img/cluster.png');
