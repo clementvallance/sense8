@@ -143,7 +143,19 @@ span{
 }
 
 .isSticky .menu-toggle div{
-    background: var(--mainPurple);
+    background-color: var(--mainPurple);
+}
+
+.isSticky .menu-toggle div:after, .isSticky .menu-toggle div:before{
+    background-color: var(--mainPurple);
+}
+
+.isSticky .open.menu-toggle div{
+    background-color: #FFFFFF;
+}
+
+.isSticky .open.menu-toggle div:after, .isSticky .open.menu-toggle div:before{
+    background-color: #FFFFFF;
 }
 
 .header{
@@ -235,8 +247,10 @@ header{
 }
 
 .about{
-  height: 60vh;
+  height: 100%;
+  padding: 10vh 0;
   justify-content: space-around;
+  align-items: flex-start;
 }
 
 .about__card {
@@ -386,6 +400,9 @@ header{
   width: 180px;
   height: 60px;
 }
+.download__button:last-child {
+  margin-left: 35px;
+}
 .download__button:first-child {
   background-image: url("../img/appstore.png");
   background-size: 70%;
@@ -487,15 +504,24 @@ header{
   cursor: pointer;
 }
 
-.mb-0.card-flex:not(.collapsed){
+.mb-0.card-flex{
+  -webkit-transition: .6s;
+  transition: .6s;
+  text-decoration: none;
+  padding-bottom: 0px;
+}
 
+.mb-0.card-flex:not(.collapsed){
+  padding-bottom: 10px;
   border-bottom: solid 1px var(--fontPurple);
 }
 
 .mb-0.card-flex:hover {
   border-bottom: solid 1px var(--fontPurple);
-  -webkit-transition: .6s;
-  transition: .6s;
+  text-decoration: none;
+}
+
+.card-header .btn-link {
   text-decoration: none;
 }
 
@@ -641,9 +667,6 @@ margin: 50px 0;
   color: white;
 }
 
-
-
-
 /*==== stars from codepen =====*/
 
 .card__stars {
@@ -717,44 +740,54 @@ margin: 50px 0;
 
 /* ===== MENU FROM CODEPEN ===== */
 .menu-toggle {
-  width: 40px;
-  height: 30px;
+  height: 35px;
+  width: 45px;
   cursor: pointer;
   z-index: 999;
-  margin-top: -8px;
 }
 
-.menu-toggle.on{
-  margin-top: 25px;
-}
-
-.menu-toggle.on .one {
-  transform: rotate(45deg) translate(4px);
-  margin: 0px;
-}
-
-.menu-toggle.on .two {
-  opacity: 0;
-  margin: 0px;
-}
-
-.menu-toggle.on .three {
-  transform: rotate(-45deg) translate(4px);
-  margin: 0px;
-}
-
-.one,
-.two,
-.three {
+.menu-toggle-line{
   width: 100%;
-  height: 3px;
-  background: white;
-  margin: 8px auto;
-  backface-visibility: hidden;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  height: 5px;
+  background-color: #FFFFFF;
+  position: relative;
+  border-radius: 10px;
+  transition: all .5s cubic-bezier(0.846,-0.365,0.807,0.486);
+}
+
+.menu-toggle-line:after, .menu-toggle-line:before{
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  left: 0;
+  border-radius: 10px;
+  background-color: #ffffff;
+  transition: all .5s cubic-bezier(0.846,-0.365,0.807,0.486);
+}
+
+.menu-toggle-line:after{
+  top: 15px;
+}
+
+.menu-toggle-line:before{
+  top: 30px;
+}
+
+/* Open Menu */
+
+.menu-toggle.open .menu-toggle-line{
+  transform: translateY(15px) rotate(135deg);
+}
+
+.menu-toggle.open .menu-toggle-line:after{
+  opacity: 0;
+}
+
+.menu-toggle.open .menu-toggle-line:before{
+  transform: rotate(-90deg);
+  top: 0px;
 }
 
 .header__menu nav {
@@ -774,10 +807,6 @@ margin: 50px 0;
   align-items: center;
 }
 
-.header__menu nav ul.hidden {
-  display: none;
-}
-
 .header__menu nav ul li {
   width: 100%;
   text-align: center;
@@ -795,18 +824,16 @@ margin: 50px 0;
   line-height: 1.5;
   width: 100%;
   display: block;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-.header__menu nav ul a:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.menu-section.on {
+.menu-section{
   z-index: 10;
-  width: 100%;
-  height: 100%;
-  display: block;
-  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  background-color: #8439FF99;
   position: fixed;
   top: 0;
   left: 0;
@@ -879,7 +906,7 @@ margin: 50px 0;
   .inner_navigation {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(25%);
   }
   .testimony {
     padding: 0 0%;
@@ -903,6 +930,7 @@ margin: 50px 0;
     text-align: center;
     margin-bottom: 50px;
   }
+
   .footer__nav_content {
     display: block;
   }
