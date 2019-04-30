@@ -72,15 +72,59 @@
 
 html{
   font-size:62.5%;
+  overflow-x: hidden;
 }
 
 
 /*==== PERSONALIZED STYLE ====*/
 body {
-
-  background-image: url("../img/cover-circle.png");
-  background-size: cover;
   font-family: var(--font);
+}
+
+.sense8_elipse{
+  position: absolute;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.sense8_elipse#Round_1{
+  top: 80%;
+  left: 76%;
+}
+
+.sense8_elipse#Round_2{
+  top: 135%;
+  left: -4%;
+}
+
+.sense8_elipse#Round_3{
+  top: 170%;
+  left: 87%;
+}
+
+.sense8_elipse#Round_4{
+  top: 274%;
+  left: 24%;
+}
+
+.sense8_elipse#Round_5{
+  top: 30%;
+  left: 29%;
+}
+
+.sense8_elipse#Round_6{
+  top: 387%;
+  left: 91%;
+}
+
+.sense8_elipse#Round_7{
+  top: 464%;
+  left: 57%;
+}
+
+.sense8_elipse#Round_8{
+  top: 540%;
+  left: 63%;
 }
 
 
@@ -114,6 +158,7 @@ span{
 .container-fluid{
   margin: 0;
   padding: 0;
+  z-index: 2;
 }
 
 
@@ -234,6 +279,7 @@ header{
   margin-left: 20px;
   color: var(--fontPurple);
   white-space: nowrap;
+  background-color: #fff;
 }
 
 .landing__button-video:hover{
@@ -457,6 +503,7 @@ header{
   margin: 15px 0;
   padding: 15px;
   box-shadow: var(--WEBshadow);
+  background-color: #fff;
 }
 
 .card-header {
