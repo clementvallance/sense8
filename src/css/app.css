@@ -108,6 +108,7 @@ header {
 .global-container {
   bottom: 0;
   position: absolute;
+  width: 100%;
 }
 #container-display {
   width: 375px;
@@ -150,8 +151,10 @@ header {
 }
 .messages-window {
 
-  padding: 7% 0;
+  height: 602px;
+  padding: 0% 5%;
   flex-direction: column;
+  overflow: scroll;
 }
 
 .container-message {
@@ -168,12 +171,12 @@ header {
 
 }
 .container-message img {
-  padding: 0 10px;
+  padding: 0 10px 0 0;
 }
 .container-message.me .msg {
   max-width: 250px;
   background: var(--gradiantPurple);
-  border-radius: 26px;
+  border-radius: 21px;
   border-bottom-right-radius : 1px;
 }
 .container-message.me .msg p {
@@ -187,14 +190,17 @@ header {
 .container-message .msg {
   background-color: #CFB3FF;
   display: flex;
-  border-radius: 21px;
-  border-top-left-radius : 1px;
+  border-radius: 12px;
+  border-top-left-radius: 1px;
+  max-width: 195px;
+  min-width: 100px;
 
 }
 .msg {
   padding: 0 10px 5px 10px;
 }
 .msg p {
+  width: 80%;
   padding: 10px;
   font-family: var(--font);
   color: var(--fontContent);
@@ -217,6 +223,8 @@ header {
   display: flex;
   align-items: flex-end;
   margin-right: 2px;
+  width: 20%;
+  flex-direction: column-reverse;
 }
 .container-message .msg-img {
   padding: 0;
@@ -251,6 +259,7 @@ header {
   background-color: white;
   position: relative;
   display: inline-block;
+  margin-right: 5%;
   vertical-align: middle;
 }
 .btn-player:after {
@@ -269,7 +278,7 @@ header {
 
 .sound {
   display: inline-block;
-  width: 66%;
+  width: 50%;
   vertical-align: middle;
   top: 50%;
   transform: translateY(5%);
@@ -283,6 +292,7 @@ header {
 .user-action {
   display: flex;
   margin-bottom: 50px;
+  background-color: white;
 }
 .type-action {
 
@@ -305,6 +315,7 @@ input {
   padding-left: 15%;
   width: 100%;
   height: 100%;
+  outline: none;
 }
 ::placeholder {
   color: #B080FF;
