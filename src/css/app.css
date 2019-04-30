@@ -26,6 +26,7 @@
 
   --webP : 1.8rem;
   --webH2 : 4.6rem;
+  --webH3 : 2rem;
   --webPBigger : 2rem;
   --webCaption : 1.2rem;
   --webA : 1.8rem;
@@ -33,6 +34,7 @@
   /* Effects */
 
   --WEBshadow : 0px 6px 25px rgba(138, 30, 255, 0.06);
+
 
 
 }
@@ -68,6 +70,23 @@
 }
 
 
+/*==== Mini reset ====*/
+input,
+label,
+select,
+button,
+textarea
+{
+  margin:0;
+  border:0;
+  padding:0;
+  display:inline-block;
+  vertical-align:middle;
+  white-space:normal;
+  background:none;
+  line-height:1;
+}
+
 html{
   font-size:62.5%;
 }
@@ -79,23 +98,29 @@ body {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  margin: 0;
 }
 
 header {
   box-shadow: var(--WEBshadow);
 }
 
+.global-container {
+  bottom: 0;
+  position: absolute;
+}
 #container-display {
   width: 375px;
   height: 812px;
-  border: solid 1px rgba(0,0,0,0.5);
+  border: solid 1px rgba(0,0,0,0.1);
   position: relative;
+  overflow: hidden;
 }
 #header-app {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 25px;
+  height: 70px;
 
 }
 #header-app h1 {
@@ -103,6 +128,7 @@ header {
   display: inline-block;
   width: 65%;
   text-align: center;
+  font-size: var(--webH3);
 }
 
 .picto-help {
@@ -114,7 +140,198 @@ header {
   display: inline-block;
 
 }
+.content {
+  padding: 0 5%;
+}
+.day {
+  text-align: center;
+  font-size: var(--webCaption);
+  font-family: var(--font);
+}
+.messages-window {
 
+  padding: 7% 0;
+  flex-direction: column;
+}
+
+.container-message {
+
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+  position: relative;
+}
+.container-message.me{
+  flex-direction: row-reverse;
+  text-align: right;
+  position: relative;
+
+}
+.container-message img {
+  padding: 0 10px;
+}
+.container-message.me .msg {
+  max-width: 250px;
+  background: var(--gradiantPurple);
+  border-radius: 26px;
+  border-bottom-right-radius : 1px;
+}
+.container-message.me .msg p {
+ color:white;
+  text-align: left;
+  display: inline-block;
+}
+.container-message.me span {
+  color:white;
+}
+.container-message .msg {
+  background-color: #CFB3FF;
+  display: flex;
+  border-radius: 21px;
+  border-top-left-radius : 1px;
+
+}
+.msg {
+  padding: 0 10px 5px 10px;
+}
+.msg p {
+  padding: 10px;
+  font-family: var(--font);
+  color: var(--fontContent);
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  margin: 0;
+  vertical-align: middle;
+}
+.translation {
+  margin: 0;
+  text-align: left;
+  color: #904DFF;
+  font-family: var(--font);
+  font-size: 1rem;
+  margin-left: 13px;
+
+}
+.hours {
+  text-align: right;
+  display: flex;
+  align-items: flex-end;
+  margin-right: 2px;
+}
+.container-message .msg-img {
+  padding: 0;
+  margin-top: 6px;
+}
+.container-img {
+  position: relative;
+}
+.reaction {
+  background: white;
+  width: 26px;
+  height: 16px;
+  border-radius: 7.5px;
+  box-shadow: 0px 6px 25px rgba(138, 30, 255, 0.28);
+  position: absolute;
+  bottom: -5px;
+  right: 5px;
+}
+
+.reaction span {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: inline-block;
+}
+.btn-player {
+  top: 50%;
+  transform: translateY(15%);
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.btn-player:after {
+  content : '';
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%,-50%) rotate(90deg);
+  width: 0px;
+  height: 14px;
+  border-bottom: solid 10px var(--mainPurple);
+  border-left: solid 10px transparent;
+  border-right: solid 10px transparent;
+
+}
+
+.sound {
+  display: inline-block;
+  width: 66%;
+  vertical-align: middle;
+  top: 50%;
+  transform: translateY(5%);
+}
+.btn-action {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  justify-content: space-around;
+}
+.user-action {
+  display: flex;
+  margin-bottom: 50px;
+}
+.type-action {
+
+  background-color: #EFE5FF;
+  border-radius: 50px;
+  height: 40px;
+  width: 228px;
+  position: relative;
+
+}
+
+input {
+  margin:0;
+  border:0;
+  padding:0;
+  display:inline-block;
+  vertical-align:middle;
+  white-space:normal;
+  background:none;
+  padding-left: 15%;
+  width: 100%;
+  height: 100%;
+}
+::placeholder {
+  color: #B080FF;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #B080FF;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #B080FF;
+}
+
+.micro {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/app/picto/microphone.png"), var(--gradiantPurple);
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 /* Small devices (landscape phones, 576px and up)*/
 @media (max-width: 576px) {

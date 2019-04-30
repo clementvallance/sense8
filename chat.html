@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" type="image/png" href="src/img/favicon.png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="./src/css/app.css">
+</head>
+<body>
+
+<main id="container-display">
+
+    <header>
+        <div>
+            <img src="./src/img/app/theme/statusbar.png" alt="#">
+            <div id="header-app">
+
+                <img src="./src/img/app/profilpic/amanda.png" alt="#">
+                <h1>Nom du cluster</h1>
+                <div class="picto-help"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="global-container">
+
+        <section class="content messages-window">
+            <h2 class="day">Today</h2>
+
+
+            <div class="container-message friend">
+                <img src="./src/img/app/profilpic/sam.png" alt="">
+                <div>
+                    <div class="msg">
+                        <p>Hey !</p>
+                        <span class="hours">12:34</span>
+                    </div>
+                    <p class="translation">see translation</p>
+                </div>
+
+            </div>
+            <div class="container-message me">
+                <div class="msg">
+                    <p>Hello ! <br> What's up ?</p>
+                    <span class="hours">12:34</span>
+                </div>
+            </div>
+            <div class="container-message friend">
+                <img src="./src/img/app/profilpic/kim.png" alt="">
+                <div>
+                    <div class="msg">
+                        <p>Hi from </br>Philippines! </p>
+                        <span class="hours">12:34</span>
+                    </div>
+                    <div class="container-img">
+                        <img class="msg-img" src="./src/img/app/assets/holidays.png" alt="#">
+                        <div class="reaction">
+                            <span>😍1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-message me">
+                <div class="msg">
+                    <div class="btn-player"></div>
+                    <img class="sound" src="./src/img/app/assets/sound.png" alt="#">
+                    <span class="hours">12:34</span>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="content user-action">
+
+            <div class="btn-action">
+                <button>
+                    <img src="./src/img/app/picto/more.png" alt="more">
+                </button>
+                <button>
+                    <img src="./src/img/app/picto/camera.png" alt="camera">
+                </button>
+                <button>
+                    <img src="./src/img/app/picto/phone.png" alt="phone">
+                </button>
+            </div>
+            <div class="type-action">
+
+                <input placeholder="Type a message..." type="text">
+                <div class="micro">
+
+                </div>
+            </div>
+
+
+
+        </section>
+    </div>
+    <footer>
+        <img src="./src/img/app/theme/home.png" alt="#">
+    </footer>
+
+</main>
+
+
+</body>
+</html>
