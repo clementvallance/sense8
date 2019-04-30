@@ -332,6 +332,10 @@ input {
   background-position: center;
   background-repeat: no-repeat;
 }
+footer {
+  position: absolute;
+  bottom: 0;
+}
 
 /* Small devices (landscape phones, 576px and up)*/
 @media (max-width: 576px) {
