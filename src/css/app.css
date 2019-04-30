@@ -155,6 +155,11 @@ header {
   padding: 0% 5%;
   flex-direction: column;
   overflow: scroll;
+  display: flex;
+  justify-content: flex-end;
+}
+.messages-window.on{
+  justify-content: inherit;
 }
 
 .container-message {
@@ -170,8 +175,14 @@ header {
   position: relative;
 
 }
-.container-message img {
+.container-message img:not(.sound) {
   padding: 0 10px 0 0;
+  width: 32px;
+  height: 32px;
+}
+.messages-window .container-message .msg-img {
+  width: 100%;
+  height: 100%;
 }
 .container-message.me .msg {
   max-width: 250px;
@@ -225,6 +236,8 @@ header {
   margin-right: 2px;
   width: 20%;
   flex-direction: column-reverse;
+  color: white;
+  font-style: italic;
 }
 .container-message .msg-img {
   padding: 0;
@@ -251,15 +264,13 @@ header {
   display: inline-block;
 }
 .btn-player {
-  top: 50%;
-  transform: translateY(15%);
-  width: 41px;
+  margin-top: 2%;
+  width: 44px;
   height: 41px;
   border-radius: 50%;
   background-color: white;
   position: relative;
   display: inline-block;
-  margin-right: 5%;
   vertical-align: middle;
 }
 .btn-player:after {
@@ -278,10 +289,16 @@ header {
 
 .sound {
   display: inline-block;
-  width: 50%;
+  width: 150px;
   vertical-align: middle;
   top: 50%;
   transform: translateY(5%);
+  background-image: url("../img/app/assets/sound.png");
+  background-position: center;
+  background-size: 80%;
+  margin-top: 1%;
+  background-repeat: no-repeat;
+
 }
 .btn-action {
   display: flex;
@@ -296,6 +313,7 @@ header {
 }
 .type-action {
 
+  overflow: auto;
   background-color: #EFE5FF;
   border-radius: 50px;
   height: 40px;
@@ -312,7 +330,7 @@ input {
   vertical-align:middle;
   white-space:normal;
   background:none;
-  padding-left: 15%;
+  padding-left: 25%;
   width: 100%;
   height: 100%;
   outline: none;
@@ -347,37 +365,15 @@ footer {
   position: absolute;
   bottom: 0;
 }
-
-/* Small devices (landscape phones, 576px and up)*/
-@media (max-width: 576px) {
-
-
-
-}
-
- /*Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {
-
-}
-
-/*// Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
-
-}
-
-/*// Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {
-
-}
 /*****************  New question PAGE  *********************/
 .global-container.wrapper{
   font-family: var( --font );
 }
 /*====== Components ======*/
 .category {
-    font-size: var(--webCaption);
-    margin-bottom: 10px;
-    display: block;
+  font-size: var(--webCaption);
+  margin-bottom: 10px;
+  display: block;
 }
 .text_btn{
   font-size: var(--webCaption);
@@ -405,7 +401,6 @@ footer {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-right: 17px;
-  transition: all .5s ease-in;
 }
 .priority_btn.is_low{
   border-color: #B080FF;
@@ -555,7 +550,7 @@ footer {
   z-index: 2;
   height: 60px;
   width: 100%;
-  font-size: 16px; 
+  font-size: 16px;
   color: var(--fontPurple);
 }
 
@@ -619,4 +614,25 @@ footer {
   height: auto;
   padding-bottom: 30px;
   margin-bottom: 300px;
+}
+/* Small devices (landscape phones, 576px and up)*/
+@media (max-width: 576px) {
+
+
+
+}
+
+ /*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+}
+
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+
+}
+
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
 }
