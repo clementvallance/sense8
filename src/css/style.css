@@ -79,6 +79,7 @@ html{
 /*==== PERSONALIZED STYLE ====*/
 body {
   font-family: var(--font);
+  overflow-x: hidden;
 }
 
 .sense8_elipse{
@@ -1033,7 +1034,7 @@ margin: 50px 0;
     overflow: hidden;
   }
   .swiper-slide {
-    padding: 25px;
+    padding: 26px;
   }
 
   .download {
