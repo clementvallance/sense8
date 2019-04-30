@@ -131,8 +131,6 @@
 
     const keypad_container = $('.keypad_container');
 
-    console.log( ask_input, ask_input_label );
-
     const enterText = ( input, label )=>{
 
         input.on('focusin', ()=>{
@@ -150,6 +148,18 @@
     }
     enterText( ask_textarea, ask_textarea_label );
     enterText( ask_input, ask_input_label );
+
+    const switchPriority = ()=>{
+        const priority_btn = $('.priority_btn');
+        
+        priority_btn.on('click', function(){
+            const current_btn = $('.priority_btn.is_active');
+            current_btn.removeClass('is_active');
+            $(this).addClass('is_active');
+        })
+    }
+
+    switchPriority();
 
 
 </script>
