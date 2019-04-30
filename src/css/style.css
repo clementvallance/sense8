@@ -233,6 +233,7 @@ header{
   font-size: 1.4em;
   margin-left: 20px;
   color: var(--fontPurple);
+  white-space: nowrap;
 }
 
 .landing__button-video:hover{
@@ -240,10 +241,8 @@ header{
   text-decoration: none;
 }
 
-.landing__image{
-  display: inline-block;
-  height: 300px;
-  background-color: var(--greyBlue);
+.landing__image img{
+  width: 51vw;
 }
 
 .about{
@@ -269,7 +268,7 @@ header{
   padding: 0 20px;
 }
 .about__card_wrapper {
-  padding: 15px 0;
+  padding: 45px 0;
   max-width: 275px;
   margin: 15px;
   border: solid 1px transparent;

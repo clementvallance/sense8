@@ -13,12 +13,9 @@
     margin: 20px auto;
     padding: 20px 0 20px 20px;
     overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0);
     transition: border .3s;
 }
 .swiper-container:hover{
-    border: 1px solid rgba(0, 0, 0, .03);
-    border-right-color: rgba(0, 0, 0, 0);
     cursor: grab;
 }
 .swiper-slide {
