@@ -342,8 +342,15 @@ header {
 .comment-img {
     width: 80%;
     position: absolute;
-    top: 55%;
+    top: 58%;
     left: 20%;
+}
+
+.comment-img img:nth-child(2){
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    left: 15%;
 }
 
 /* Small devices (landscape phones, 576px and up)*/
