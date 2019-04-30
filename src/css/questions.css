@@ -160,6 +160,18 @@ header {
 .nav {
     height: 65px;
     background-color: #CFB3FF;
+    display: flex;
+}
+
+.nav div{
+    text-align:center;
+    width: 25%;
+    font-size:12px;
+    vertical-align: middle;
+    font-family: var(--font);
+    color: #1D004D;
+    opacity: 0.6;
+    height: 65px;
 }
 .close-questions {
     width: 80%;
