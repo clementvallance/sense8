@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Question</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" type="image/png" href="src/img/favicon.png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="./src/css/app.css">
+
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.0.slim.min.js"
+      integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI="
+      crossorigin="anonymous"></script>
+</head>
+<body>
+
+<main id="container-display" class="new_question">
+
+    <!-- Header -->
+    <header>
+        <div>
+            <img src="./src/img/app/theme/statusbar.png" alt="#">
+            <div id="header-app">
+
+                <button class="back_btn"></button>
+                <h1>New question</h1>
+                <button class="text_btn">Done</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <div class="global-container wrapper">
+        <nav>
+            <ul class="question_type_container">
+                <li class="question_type"><button><span>All questions</span></button></li>
+                <li class="question_type"><button><span>My questions</span></button></li>
+                <li class="question_type"><button><span class="is_current">Ask a question</span></button></li>
+                <li class="question_type"><button><span>Archived questions</span></button></li>
+                <li class="current_question_highlighter"></li>
+            </ul>
+        </nav>
+
+        <!-- Tab -->
+        <div class="tab_content tab_ask">
+
+            <!-- Ask -->
+            <section>
+                <h3 class="section_subtitle">What is your question ?</h3>
+
+                <div class="ask_textarea_container">
+                    <label class="ask_textarea_label">Go ahead, ask your question</label>
+                    <textarea class="ask_textarea"></textarea>
+                </div>
+               
+            </section>
+
+            <!-- Priority -->
+            <section>
+                <h3 class="section_subtitle">Priority</h3>
+
+                <div class="button_container priority_container">
+                    <button class="priority_btn is_low is_active">Low</button>
+                    <button class="priority_btn is_normal">Normal</button>
+                    <button class="priority_btn is_urgent">Urgent</button>
+                </div>
+               
+            </section>
+
+             <!-- Tags -->
+            <section>
+                <h3 class="section_subtitle">Tags</h3>
+
+                <div class="ask_input_container">
+                    <label class="ask_input_label">Add tags...</label>
+                    <input class="ask_input"></input>
+                </div>
+
+                <div class="button_container tag_container">
+                    <button class="tag_btn">
+                        <span>Sport</span>
+                        <span class="tag_btn_del"></span>
+                    </button>
+                    <button class="tag_btn">
+                        <span>Cooking</span>
+                        <span class="tag_btn_del"></span>
+                    </button>
+                    <button class="tag_btn">
+                        <span>Yoga</span>
+                        <span class="tag_btn_del"></span>
+                    </button>
+                     <button class="tag_btn">
+                        <span>Personal development</span>
+                        <span class="tag_btn_del"></span>
+                    </button>
+                </div>
+               
+            </section>
+
+            <ul class="bottom_menu">
+                <li class="bottom_menu_item"><button><img src="./src/img/app/picto/camera.png"></button></li>
+                <li class="bottom_menu_item"><button><img src="./src/img/app/picto/video.png"></button></li>
+                <li class="bottom_menu_item"><button><img src="./src/img/app/picto/link.png"></button></li>
+                <li class="bottom_menu_item"><button><img src="./src/img/app/picto/wave.png"></button></li>
+            </ul>
+        </div>
+        
+        <!-- keypad -->
+        <div class="keypad_container">
+            <img class="keypad" src="./src/img/app/theme/keypad.png">
+        </div>
+    </div>
+
+    <footer>
+        <img src="./src/img/app/theme/home.png" alt="#">
+    </footer>
+
+</main>
+
+<script type="text/javascript">
+
+    const ask_textarea_label = $('.ask_textarea_label');
+    const ask_textarea = $('.ask_textarea');
+
+    const ask_input_label = $('.ask_input_label');
+    const ask_input = $('.ask_input');
+
+    const keypad_container = $('.keypad_container');
+
+    console.log( ask_input, ask_input_label );
+
+    const enterText = ( input, label )=>{
+
+        input.on('focusin', ()=>{
+
+            label.addClass('is_disabled');
+            keypad_container.addClass('is_visible');
+        });
+
+        input.on('focusout', ()=>{
+
+            label.removeClass('is_disabled');
+            keypad_container.removeClass('is_visible');
+        });
+
+    }
+    enterText( ask_textarea, ask_textarea_label );
+    enterText( ask_input, ask_input_label );
+
+
+</script>
+</body>
+</html>
