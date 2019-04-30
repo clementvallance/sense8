@@ -123,14 +123,6 @@
 
 <script type="text/javascript">
 
-    const ask_textarea_label = $('.ask_textarea_label');
-    const ask_textarea = $('.ask_textarea');
-
-    const ask_input_label = $('.ask_input_label');
-    const ask_input = $('.ask_input');
-
-    const keypad_container = $('.keypad_container');
-
     const enterText = ( input, label )=>{
 
         input.on('focusin', ()=>{
@@ -141,11 +133,19 @@
 
         input.on('focusout', ()=>{
 
+            if( $.trim(input.val()) != ''){ return;}
             label.removeClass('is_disabled');
             keypad_container.removeClass('is_visible');
         });
 
     }
+    const ask_textarea_label = $('.ask_textarea_label');
+    const ask_textarea = $('.ask_textarea');
+
+    const ask_input_label = $('.ask_input_label');
+    const ask_input = $('.ask_input');
+
+    const keypad_container = $('.keypad_container');
     enterText( ask_textarea, ask_textarea_label );
     enterText( ask_input, ask_input_label );
 
@@ -160,6 +160,13 @@
     }
 
     switchPriority();
+
+    // Manage tags
+    (function(){
+
+      // Code here...
+
+    })();
 
 
 </script>
