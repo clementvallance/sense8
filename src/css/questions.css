@@ -162,9 +162,25 @@ header {
     height: 171px;
     background-color: white;
     border-radius: 5px;
-    box-shadow:  var(--WEBshadow);
+    -webkit-box-shadow: 0px 6px 25px 0px rgba(138,30,255,0.06);
+    -moz-box-shadow: 0px 6px 25px 0px rgba(138,30,255,0.06);
+    box-shadow: 0px 6px 25px 0px rgba(138,30,255,0.06);
     position: absolute;
     top: 28%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.open-questions {
+    width: 80%;
+    height: 304px;
+    background-color: white;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 6px 25px 0px rgba(138,30,255,0.06);
+    -moz-box-shadow: 0px 6px 25px 0px rgba(138,30,255,0.06);
+    box-shadow: 0px 6px 25px 0px rgba(138,30,255,0.06);
+    position: absolute;
+    top: 54%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -174,12 +190,33 @@ header {
     color: var(--fontPurple);
     font-size: 20px;
     font-weight: bold;
-    margin: 15px 0 5px 15px;
+    margin: 0 0 5px 15px;
+    position: absolute;
+    left: 15%;
+    top: 10%;
+}
+
+.title {
+    font-family: var(--font);
+    color: var(--fontPurple);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 5px 15px;
+    position: absolute;
+    left: 15%;
+    top: 10%;
+}
+
+.profile-picture{
+    position: absolute;
+    left: 5%;
+    top: 12%;
 }
 
 .watch-picture {
     position: absolute;
     right: 5%;
+    top: 33%;
 }
 
 .watch-picture img{
@@ -194,8 +231,10 @@ header {
   }
   .user-action {
     display: flex;
-    margin: 50px 0;
-    justify-content: center;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .type-action {
   
@@ -245,6 +284,67 @@ header {
     background-position: center;
     background-repeat: no-repeat;
   }
+
+.more {
+    position: absolute;
+    left: 25%;
+    top: 20%;
+  }
+.more img {
+    display: inline;
+    margin-left: 5px;
+}
+
+.more p {
+    font-size: 12px;
+    letter-spacing: 10%;
+    color: #B080FF;
+    display: inline;
+    font-family: var(--font);
+}
+
+.open-questions .watch-picture {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+}
+
+.open-questions .user-action {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.comment-text {
+    width: 80%;
+    position: absolute;
+    top: 33%;
+    left: 20%;
+}
+.comment-text img:first-child, .comment-img img:first-child {
+    width: 25px;
+    display: inline;
+    vertical-align: middle;
+}
+
+.comment-text p {
+    display: inline;
+    margin-left: 10px;
+    font-family: var(--font);
+}
+
+.comment-text a {
+    color: #B080FF;
+    margin-left: 35px;
+}
+
+.comment-img {
+    width: 80%;
+    position: absolute;
+    top: 55%;
+    left: 20%;
+}
 
 /* Small devices (landscape phones, 576px and up)*/
 @media (max-width: 576px) {
