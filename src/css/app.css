@@ -400,6 +400,7 @@ footer {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-right: 17px;
+  transition: all .5s ease-in;
 }
 .priority_btn.is_low{
   border-color: #B080FF;

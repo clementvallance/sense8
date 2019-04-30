@@ -122,46 +122,38 @@
 </main>
 
 <script type="text/javascript">
-
-    const ask_textarea_label = $('.ask_textarea_label');
-    const ask_textarea = $('.ask_textarea');
-
-    const ask_input_label = $('.ask_input_label');
-    const ask_input = $('.ask_input');
-
-    const keypad_container = $('.keypad_container');
-
     const enterText = ( input, label )=>{
-
         input.on('focusin', ()=>{
-
             label.addClass('is_disabled');
             keypad_container.addClass('is_visible');
         });
-
         input.on('focusout', ()=>{
-
+            if( $.trim(input.val()) != ''){ return;}
             label.removeClass('is_disabled');
             keypad_container.removeClass('is_visible');
         });
-
     }
+    const ask_textarea_label = $('.ask_textarea_label');
+    const ask_textarea = $('.ask_textarea');
+    const ask_input_label = $('.ask_input_label');
+    const ask_input = $('.ask_input');
+    const keypad_container = $('.keypad_container');
     enterText( ask_textarea, ask_textarea_label );
     enterText( ask_input, ask_input_label );
-
     const switchPriority = ()=>{
         const priority_btn = $('.priority_btn');
-        
+
         priority_btn.on('click', function(){
             const current_btn = $('.priority_btn.is_active');
             current_btn.removeClass('is_active');
             $(this).addClass('is_active');
         })
     }
-
     switchPriority();
-
-
+    // Manage tags
+    (function(){
+        // Code here...
+    })();
 </script>
 </body>
 </html>
