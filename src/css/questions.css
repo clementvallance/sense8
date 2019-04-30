@@ -138,7 +138,7 @@ header {
     width: 80%;
     border-bottom: 1px solid var(--mainPurple);
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 50%;
     transform: translateX(-50%);
     padding: 5px 0;
@@ -157,6 +157,10 @@ header {
    width: 10px;
 }
 
+.nav {
+    height: 65px;
+    background-color: #CFB3FF;
+}
 .close-questions {
     width: 80%;
     height: 171px;
@@ -166,7 +170,7 @@ header {
     -moz-box-shadow: 0px 6px 25px 0px rgba(138,30,255,0.06);
     box-shadow: 0px 6px 25px 0px rgba(138,30,255,0.06);
     position: absolute;
-    top: 28%;
+    top: 32%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -180,7 +184,7 @@ header {
     -moz-box-shadow: 0px 6px 25px 0px rgba(138,30,255,0.06);
     box-shadow: 0px 6px 25px 0px rgba(138,30,255,0.06);
     position: absolute;
-    top: 54%;
+    top: 57%;
     left: 50%;
     transform: translateX(-50%);
 }
