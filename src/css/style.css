@@ -53,8 +53,7 @@
   transition: all 250ms ease-in;
 }
 .s8-btn:hover{
-
-  box-shadow: 0px 5px 23px rgba(143, 0, 255, 0.25);
+  box-shadow: 0px 5px 8px rgba(143, 0, 255, 0.18);
   transition: all 250ms ease-in;
 }
 
@@ -84,7 +83,7 @@ body {
 
 .sense8_elipse{
   position: absolute;
-  opacity: 0.5;
+  opacity: 0.075;
   z-index: -1;
 }
 
@@ -186,6 +185,7 @@ span{
   color: white;
   border: none;
   font-size: 1.5rem;
+  transition: .4s;
 }
 
 .isSticky .menu-toggle div{
@@ -252,7 +252,7 @@ header{
 }
 .landing__image {
   position: absolute;
-  right: -10px;
+  right: 50px;
 }
 .landing__text{
   display: inline-block;
@@ -281,16 +281,17 @@ header{
 .landing__button-video{
   font-size: 1.4em;
   margin-left: 20px;
-  color: var(--fontPurple);
+  color: #ffffff;
+  transition: .2s;
 }
 
 .landing__button-video:hover{
-  color: #ffffff;
+  color: var(--mainGreen);
   text-decoration: none;
 }
 
 .landing__image img{
-  width: 51vw;
+  width: 52vw;
 }
 
 .about{
@@ -341,7 +342,7 @@ header{
 }
 
 .features{
-  height: 80vh;
+  height: 60vh;
   flex-direction: row-reverse;
 }
 .features.reverse{
@@ -377,17 +378,14 @@ header{
 
 .features__image{
   display: inline-block;
-  height: 50vh;
+  height: auto;
   width: 100%;
-  position: relative;
+  text-align: center;
 }
 
 .features__image img{
   width: 80%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  height: auto;
 }
 
 .features__text h1{
@@ -910,8 +908,9 @@ margin: 50px 0;
     width: 100%;
     position: absolute;
     z-index: 1;
-    opacity: 0.5;
+    opacity: 0.25;
     left: 10%;
+    top: 15vh
   }
   .landing {
     flex-direction: column-reverse;
@@ -952,7 +951,7 @@ margin: 50px 0;
   .features {
     height: auto;
     flex-direction: column;
-    margin-bottom: 50px;
+    margin: 125px 0px;
   }
   .features__text{
     margin: 0px 0px 25px 0px;
